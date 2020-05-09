@@ -1,9 +1,6 @@
 package com.example.scalate
 
-import java.util.UUID
-
-import com.example.scalate.ScalateSample.template
-import org.fusesource.scalate.{DefaultRenderContext, RenderContext, TemplateEngine}
+import org.fusesource.scalate.{DefaultRenderContext, TemplateEngine}
 import org.fusesource.scalate.support.StringTemplateSource
 import org.slf4j.LoggerFactory
 
