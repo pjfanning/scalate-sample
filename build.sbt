@@ -2,7 +2,7 @@ name := "scalate-sample"
 
 version := "1.0"
 
-scalaVersion := "2.12.11"
+scalaVersion := "2.13.2"
 
 libraryDependencies ++= Seq(
   "org.scalatra.scalate" %% "scalate-core" % "1.9.5",
