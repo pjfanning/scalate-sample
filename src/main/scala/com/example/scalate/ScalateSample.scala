@@ -1,7 +1,6 @@
 package com.example.scalate
 
 import org.fusesource.scalate.{DefaultRenderContext, TemplateEngine}
-import org.fusesource.scalate.support.StringTemplateSource
 import org.slf4j.LoggerFactory
 
 object ScalateSample extends App {
@@ -17,13 +16,11 @@ object ScalateSample extends App {
   def transform(input: String, tokens: Map[String, Any]): String = {
     val filename = "test.ssp"
     val engine = new TemplateEngine()
-    val source = new StringTemplateSource(filename, input)
-    val template = engine.compile(source)
+    val template = engine.compileSsp(input)
     val ctx = new DefaultRenderContext(filename, engine)
     tokens.foreach { case (key, value) =>
       ctx.setAttribute(key, Some(value))
     }
-    log.info(s"$ctx $template")
     ctx.capture(template)
   }
 }
